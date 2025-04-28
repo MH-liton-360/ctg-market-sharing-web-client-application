@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Poster from "./poster";
 const Main = () => {
 
-
     const [posters, setPosters] = useState([]);
 
     useEffect(() => {
