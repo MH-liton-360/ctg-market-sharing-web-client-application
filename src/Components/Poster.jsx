@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Poster = ({ poster }) => {
-    const { id, service_image, movie_Title, genre, release_year, rating, duration } = poster;
+    const { id, service_image, service_name, genre, release_year, rating, duration } = poster;
     return (
         <div>
             <div className="card bg-base-100 shadow-sm">
@@ -12,7 +12,7 @@ const Poster = ({ poster }) => {
                         alt={Poster} />
                 </figure>
                 <div className="card-body">
-                    <h2 className="card-title">{movie_Title}</h2>
+                    <h2 className="card-title">{service_name}</h2>
                     <p>{genre}</p>
 
                     <div className="divider"></div>
