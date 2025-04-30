@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 
-const AddMovieCard = ({ movie, movies, setMovies }) => {
+const AddCarCard = ({ movie, movies, setMovies }) => {
 
     const { _id, photo, name, genre, duration, year, rating, summary } = movie;
 
@@ -18,7 +18,7 @@ const AddMovieCard = ({ movie, movies, setMovies }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://movie-portal-server-bay-seven.vercel.app/movie/${_id}`, {
+                fetch(`https://ctg-market-sharing-web-server.vercel.app/cars/${_id}`, {
                     method: 'DELETE'
                 })
                     .then((res) => res.json())
@@ -74,4 +74,4 @@ const AddMovieCard = ({ movie, movies, setMovies }) => {
     );
 };
 
-export default AddMovieCard;
+export default AddCarCard;

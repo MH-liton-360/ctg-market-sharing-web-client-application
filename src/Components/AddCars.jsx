@@ -1,29 +1,29 @@
 import Swal from 'sweetalert2'
 
-const AddMovies = () => {
-    const handleAddMovie = event => {
+const AddCars = () => {
+    const handleAddCar = event => {
         event.preventDefault();
 
         const form = event.target;
 
         const photo = form.photo.value;
         const name = form.name.value;
-        const genre = form.genre.value;
-        const duration = form.duration.value;
+        const location = form.location.value;
+        const price = form.price.value;
         const year = form.year.value;
         const rating = form.rating.value;
         const summary = form.summary.value;
 
-        const newMovie = { photo, name, genre, duration, year, rating, summary };
-        console.log(newMovie);
+        const newCar = { photo, name, location, price, year, rating, summary };
+        console.log(newCar);
 
         //send data to the server
-        fetch('https://movie-portal-server-bay-seven.vercel.app/movie', {
+        fetch('https://ctg-market-sharing-web-server.vercel.app/cars', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newMovie)
+            body: JSON.stringify(newCar)
         })
             .then(res => res.json())
             .then(data => {
@@ -31,7 +31,7 @@ const AddMovies = () => {
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Movie added successfully!',
+                        text: 'car added successfully!',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     });
@@ -42,16 +42,16 @@ const AddMovies = () => {
     }
     return (
         <div className="p-10 text-center">
-            <h2 className="text-2xl text-blue-700 font-bold">Add a New Movie</h2>
+            <h2 className="text-2xl text-blue-700 font-bold">Add a New Car</h2>
             {/* Add your form here later */}
 
 
-            <form onSubmit={handleAddMovie} className="pt-10">
+            <form onSubmit={handleAddCar} className="pt-10">
                 {/* Movie poster row */}
                 <div className="md:flex justify-center gap-20">
                     <div className="w-full">
-                        <label className="fieldset-label">Movie Poster</label>
-                        <input name="photo" type="text" className="input w-full" placeholder="Movie Poster" />
+                        <label className="fieldset-label">Service image</label>
+                        <input name="photo" type="text" className="input w-full" placeholder="Service image" />
                     </div>
 
                 </div>
@@ -59,12 +59,12 @@ const AddMovies = () => {
                 {/* Title and Genre row */}
                 <div className="md:flex justify-center gap-20">
                     <div className="md:w-1/2">
-                        <label className="fieldset-label">Movie Title</label>
-                        <input name="name" type="text" className="input w-full" placeholder="Movie Title" />
+                        <label className="fieldset-label">Service name</label>
+                        <input name="name" type="text" className="input w-full" placeholder="Service name" />
                     </div>
                     <div className="md:w-1/2">
-                        <label className="fieldset-label">Genre</label>
-                        <input name="genre" type="text" className="input w-full" placeholder="Genre" />
+                        <label className="fieldset-label">service_location</label>
+                        <input name="location" type="text" className="input w-full" placeholder="service_location" />
                     </div>
 
                 </div>
@@ -72,8 +72,8 @@ const AddMovies = () => {
                 {/* Duration and Release Year row */}
                 <div className="md:flex justify-center gap-20">
                     <div className="md:w-1/2">
-                        <label className="fieldset-label">Duration</label>
-                        <input name="duration" type="text" className="input w-full" placeholder="Duration" />
+                        <label className="fieldset-label">service_price</label>
+                        <input name="price" type="text" className="input w-full" placeholder="service_price" />
                     </div>
                     <div className="md:w-1/2">
                         <label className="fieldset-label">Release Year</label>
@@ -93,7 +93,7 @@ const AddMovies = () => {
                     </div>
                 </div>
 
-                <input type="submit" value="Add Movie" className="btn btn-block" />
+                <input type="submit" value="Add Car" className="btn btn-block" />
 
             </form>
         </div>
@@ -103,4 +103,4 @@ const AddMovies = () => {
     );
 };
 
-export default AddMovies;
+export default AddCars;

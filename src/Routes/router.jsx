@@ -6,8 +6,8 @@ import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import Error from "../Components/Error";
 import PosterDetails from "../Components/PosterDetails";
-import AddMovies from "../Components/AddMovies";
 import MyFavorites from "../Components/MyFavorites";
+import AddCars from "../Components/AddCars";
 
 const router = createBrowserRouter([
 
@@ -27,23 +27,23 @@ const router = createBrowserRouter([
 
             },
             {
-                path: "add-movies",
+                path: "add-service",
                 element: (
                     <PrivateRoute>
-                        <AddMovies></AddMovies>
+                        <AddCars></AddCars>
                     </PrivateRoute>
                 )
             },
             {
-                path: "My-Favorites",
+                path: "my-favorites",
                 loader: async () => {
                     try {
-                        const res = await fetch('https://movie-portal-server-bay-seven.vercel.app/movie');
+                        const res = await fetch('https://ctg-market-sharing-web-server.vercel.app/cars');
                         const data = await res.json();
                         return Array.isArray(data) ? data : [];
                     } catch (error) {
                         console.error("Loader failed:", error);
-                        throw new Response("Failed to load favorite movies", { status: 500 });
+                        throw new Response("Failed to load favorite cars", { status: 500 });
                     }
                 },
                 element: (

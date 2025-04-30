@@ -1,11 +1,11 @@
 import { useLoaderData } from "react-router-dom";
-import AddMovieCard from "./addMovieCard";
+import AddCarCard from "./AddCarCard";
 import { useState } from "react";
 
 const MyFavorites = () => {
 
-    const loadedMovies = useLoaderData();
-    const [movies, setMovies] = useState(Array.isArray(loadedMovies) ? loadedMovies : []);
+    const loadedCars = useLoaderData();
+    const [cars, setCars] = useState(Array.isArray(loadedCars) ? loadedCars : []);
 
 
     return (
@@ -14,12 +14,12 @@ const MyFavorites = () => {
 
             <div className="grid md:grid-cols-2 gap-4">
 
-                {Array.isArray(movies) && movies.map(movie => (
-                    <AddMovieCard
-                        key={movie._id}
-                        movie={movie}
-                        movies={movies}
-                        setMovies={setMovies}
+                {Array.isArray(cars) && cars.map(car => (
+                    <AddCarCard
+                        key={car._id}
+                        car={car}
+                        cars={cars}
+                        setCars={setCars}
                     />
                 ))}
 
