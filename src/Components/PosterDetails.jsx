@@ -6,6 +6,7 @@ const PosterDetails = () => {
     const data = useLoaderData();
 
 
+
     const poster = data.find(poster => poster.id.toString() === id);
 
     const { movie_poster, movie_Title, genre, release_year, rating, duration, language, country, cast, summary } = poster;
