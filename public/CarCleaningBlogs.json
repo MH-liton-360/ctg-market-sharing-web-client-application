@@ -11,7 +11,7 @@
     },
     {
         "id": "2",
-        "service_image": "https://example.com/images/exterior-wash.jpg",
+        "service_image": "https://i.ibb.co/Q3Fwfxj4/pexels-tima-miroshnichenko-6873010.jpg",
         "service_name": "Exterior Wash & Wax",
         "service_description": "Complete exterior wash with premium wax coating.",
         "service_price": "$49",
@@ -21,7 +21,7 @@
     },
     {
         "id": "3",
-        "service_image": "https://example.com/images/engine-cleaning.jpg",
+        "service_image": "https://i.ibb.co/v4zVyt08/Cleaning-Engine-Bay-1800x.webp",
         "service_name": "Engine Bay Cleaning",
         "service_description": "Safe and detailed cleaning of your car's engine bay.",
         "service_price": "$65",
@@ -31,7 +31,7 @@
     },
     {
         "id": "4",
-        "service_image": "https://example.com/images/full-detailing.jpg",
+        "service_image": "https://i.ibb.co/HDC0qDb4/hhhhIP.jpg",
         "service_name": "Full Car Detailing",
         "service_description": "Inside-outside deep cleaning and polishing for your car.",
         "service_price": "$159",
@@ -41,7 +41,7 @@
     },
     {
         "id": "5",
-        "service_image": "https://example.com/images/headlight-restoration.jpg",
+        "service_image": "https://i.ibb.co/B0m9d0K/OIP.jpg",
         "service_name": "Headlight Restoration",
         "service_description": "Restore clarity and brightness to your headlights.",
         "service_price": "$39",
@@ -51,7 +51,7 @@
     },
     {
         "id": "6",
-        "service_image": "https://example.com/images/odor-removal.jpg",
+        "service_image": "https://i.ibb.co/ymwwkG7j/OIP-1.jpg",
         "service_name": "Odor Removal Treatment",
         "service_description": "Remove stubborn smells with our ozone deodorizing service.",
         "service_price": "$89",
