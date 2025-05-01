@@ -1,8 +1,8 @@
 import Swal from "sweetalert2";
 
-const AddCarCard = ({ movie, movies, setMovies }) => {
+const AddCarCard = ({ car, cars, setCars }) => {
 
-    const { _id, Service_image, Service_name, genre, duration, year, rating, summary } = movie;
+    const { _id, photo, name, location, price, provider, rating, description } = car;
 
     const handleDelete = _id => {
         console.log(_id);
@@ -27,11 +27,11 @@ const AddCarCard = ({ movie, movies, setMovies }) => {
                         if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",
-                                text: "Your movie has been deleted.",
+                                text: "Your car has been deleted.",
                                 icon: "success"
                             });
-                            const remaining = movies.filter(mov => mov._id !== _id)
-                            setMovies(remaining);
+                            const remaining = cars.filter(carr => carr._id !== _id)
+                            setCars(remaining);
                         }
                     })
             }
@@ -44,18 +44,18 @@ const AddCarCard = ({ movie, movies, setMovies }) => {
                 <div className="card card-side bg-base-100 shadow-xl">
                     <figure>
                         <img
-                            src={Service_image}
+                            src={photo}
                             className="h-[150px] p-4 rounded-3xl"
-                            alt="Movie" />
+                            alt="Car" />
                     </figure>
                     <div className="flex justify-between w-full p-4">
                         <div className="pl-12 pt-3">
-                            <h2><strong>Name: </strong> {Service_image}</h2>
-                            <p><strong>Genre: </strong> {genre}</p>
-                            <p><strong>Duration: </strong> {duration}</p>
-                            <p><strong>Year: </strong> {year}</p>
+                            <h2><strong>Name: </strong> {name}</h2>
+                            <p><strong>Genre: </strong> {location}</p>
+                            <p><strong>Duration: </strong> {price}</p>
+                            <p><strong>Year: </strong> {provider}</p>
                             <p><strong>Rating: </strong> {rating}</p>
-                            <p><strong>Summary: </strong> {summary}</p>
+                            <p><strong>Summary: </strong> {description}</p>
                         </div>
 
                         <div className="card-actions justify-end">

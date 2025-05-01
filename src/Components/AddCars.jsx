@@ -14,7 +14,7 @@ const AddCars = () => {
         const rating = form.rating.value;
         const description = form.description.value;
 
-        const newCar = { photo, name, location, price, year, rating, description };
+        const newCar = { photo, name, location, price, provider, rating, description };
         console.log(newCar);
 
         //send data to the server
