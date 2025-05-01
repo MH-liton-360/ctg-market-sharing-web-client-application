@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import AddCarCard from "./AddCarCard";
 import { useState } from "react";
 
-const MyFavorites = () => {
+const BookedServices = () => {
 
     const loadedCars = useLoaderData();
     const [cars, setCars] = useState(Array.isArray(loadedCars) ? loadedCars : []);
@@ -10,7 +10,7 @@ const MyFavorites = () => {
 
     return (
         <div className="text-center m-20">
-            <h2 className="text-2xl my-20 text-blue-700 font-bold">Single Service</h2>
+            <h2 className="text-2xl my-20 text-blue-700 font-bold">Booked Services</h2>
 
             <div className="grid md:grid-cols-2 gap-4">
 
@@ -28,4 +28,4 @@ const MyFavorites = () => {
     );
 };
 
-export default MyFavorites;
+export default BookedServices;

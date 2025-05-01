@@ -6,8 +6,8 @@ import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import Error from "../Components/Error";
 import PosterDetails from "../Components/PosterDetails";
-import MyFavorites from "../Components/MyFavorites";
 import AddCars from "../Components/AddCars";
+import BookedServices from "../Components/BookedServices";
 
 const router = createBrowserRouter([
 
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
 
             },
             {
-                path: "add-service",
+                path: "/dashboard/add-service",
                 element: (
                     <PrivateRoute>
                         <AddCars></AddCars>
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
                 )
             },
             {
-                path: "my-favorites",
+                path: "/dashboard/booked-services",
                 loader: async () => {
                     try {
                         const res = await fetch('https://ctg-market-sharing-web-server.vercel.app/cars');
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
                 },
                 element: (
                     <PrivateRoute>
-                        <MyFavorites />
+                        <BookedServices></BookedServices>
                     </PrivateRoute>
                 ),
                 errorElement: <Error />

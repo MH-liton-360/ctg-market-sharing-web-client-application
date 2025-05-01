@@ -11,9 +11,24 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
     const links = <>
-        <li><NavLink to="/">Home</NavLink> </li>
-        <li><NavLink to="/add-service">Add Service</NavLink> </li>
-        <li><NavLink to="/my-favorites">Single Service</NavLink> </li>
+        <div className="navbar-center hidden lg:flex justify-center items-center">
+            <ul className="menu menu-horizontal px-1 flex gap-4 items-center">
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/services">Services</NavLink></li>
+
+                <li tabIndex={0} className="dropdown dropdown-hover">
+                    <label tabIndex={0} className="btn btn-ghost m-1">Dashboard</label>
+                    <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 left-1/2 -translate-x-1/2">
+                        <li><NavLink to="/dashboard/add-service">Add Service</NavLink></li>
+                        <li><NavLink to="/dashboard/manage-services">Manage Services</NavLink></li>
+                        <li><NavLink to="/dashboard/booked-services">Booked Services</NavLink></li>
+                        <li><NavLink to="/dashboard/service-todo">Service To-Do</NavLink></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
     </>
 
     return (

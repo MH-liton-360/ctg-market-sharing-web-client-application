@@ -42,7 +42,7 @@ const AddCars = () => {
     }
     return (
         <div className="p-10 text-center">
-            <h2 className="text-2xl text-blue-700 font-bold">Add a New Car</h2>
+            <h2 className="text-2xl text-blue-700 font-bold">Add service a new car</h2>
             {/* Add your form here later */}
 
 
@@ -77,7 +77,7 @@ const AddCars = () => {
                     </div>
                     <div className="md:w-1/2">
                         <label className="fieldset-label">provider</label>
-                        <input name="year" type="text" className="input w-full" placeholder="Release Year" />
+                        <input name="provider" type="text" className="input w-full" placeholder="provider" />
                     </div>
                 </div>
 
