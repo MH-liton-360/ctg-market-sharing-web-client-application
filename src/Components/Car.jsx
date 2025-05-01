@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-const Poster = ({ poster }) => {
-    const { id, service_image, service_name, service_location, service_price } = poster;
+const Car = ({ car }) => {
+    const { id, service_image, service_name, service_location, service_price } = car;
     return (
         <div>
             <div className="card bg-base-100 shadow-sm">
@@ -9,7 +9,7 @@ const Poster = ({ poster }) => {
                     <img
                         src={service_image}
                         className="h-[280px] w-[380px] rounded-2xl"
-                        alt={Poster} />
+                        alt="" />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{service_name}</h2>
@@ -26,7 +26,7 @@ const Poster = ({ poster }) => {
                         </div>
                     </div>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary"><Link to={`/Poster/${id}`}> See Details</Link></button>
+                        <button className="btn btn-primary"><Link to={`/car/${id}`}> See Details</Link></button>
                     </div>
                 </div>
 
@@ -36,4 +36,4 @@ const Poster = ({ poster }) => {
     );
 };
 
-export default Poster;
+export default Car;

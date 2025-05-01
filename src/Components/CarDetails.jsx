@@ -1,15 +1,15 @@
 import { useLoaderData, useParams } from "react-router-dom";
 
-const PosterDetails = () => {
+const CarDetails = () => {
 
     const { id } = useParams();
     const data = useLoaderData();
 
 
 
-    const poster = data.find(poster => poster.id.toString() === id);
+    const car = data.find(car => car.id.toString() === id);
 
-    const { service_image, service_name, service_location, service_price, service_description, provider_name, rating } = poster;
+    const { service_image, service_name, service_location, service_price, service_description, provider_name, rating } = car;
     return (
 
         <section className="justify-items-center pt-10">
@@ -47,4 +47,4 @@ const PosterDetails = () => {
     );
 };
 
-export default PosterDetails;
+export default CarDetails;

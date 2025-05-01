@@ -5,9 +5,11 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import Error from "../Components/Error";
-import PosterDetails from "../Components/PosterDetails";
 import AddCars from "../Components/AddCars";
+import ManageService from "../Components/ManageService";
 import BookedServices from "../Components/BookedServices";
+import ServiceToDo from "../Components/ServiceToDo";
+import CarDetails from "../Components/CarDetails";
 
 const router = createBrowserRouter([
 
@@ -17,14 +19,14 @@ const router = createBrowserRouter([
 
         children: [
             {
-                path: "Poster/:id",
+                path: "car/:id",
                 element: (
                     <PrivateRoute>
-                        <PosterDetails></PosterDetails>
+                        <CarDetails></CarDetails>
                     </PrivateRoute>
                 ),
                 loader: () => fetch('/CarCleaningBlogs.json'),
-
+                errorElement: <Error />,
             },
             {
                 path: "/dashboard/add-service",
@@ -35,7 +37,23 @@ const router = createBrowserRouter([
                 )
             },
             {
-                path: "/dashboard/booked-services",
+                path: "/dashboard/booked-service",
+                element: (
+                    <PrivateRoute>
+                        <BookedServices></BookedServices>
+                    </PrivateRoute>
+                )
+            },
+            {
+                path: "/dashboard/service-todo",
+                element: (
+                    <PrivateRoute>
+                        <ServiceToDo></ServiceToDo>
+                    </PrivateRoute>
+                )
+            },
+            {
+                path: "/dashboard/manage-service",
                 loader: async () => {
                     try {
                         const res = await fetch('https://ctg-market-sharing-web-server.vercel.app/cars');
@@ -48,7 +66,7 @@ const router = createBrowserRouter([
                 },
                 element: (
                     <PrivateRoute>
-                        <BookedServices></BookedServices>
+                        <ManageService></ManageService>
                     </PrivateRoute>
                 ),
                 errorElement: <Error />
