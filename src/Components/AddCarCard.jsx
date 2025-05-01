@@ -61,7 +61,7 @@ const AddCarCard = ({ car, cars, setCars }) => {
                         <div className="card-actions justify-end">
                             <div className="join join-vertical space-y-3">
                                 <button className="btn join-item btn-info rounded-lg">View</button>
-                                <button className="btn join-item btn-warning rounded-lg">Edit</button>
+                                <button className="btn join-item btn-warning rounded-lg">Update</button>
                                 <button
                                     onClick={() => handleDelete(_id)}
                                     className="btn join-item btn-error rounded-lg">X</button>

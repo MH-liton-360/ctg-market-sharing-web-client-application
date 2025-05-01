@@ -40,7 +40,9 @@ const CarDetails = () => {
                     <div>
                         <p><strong>Description:</strong> {service_description}</p>
                     </div>
-
+                    <div className="card-actions justify-end">
+                        <button className="btn btn-primary bg-amber-50 text-blue-700 btn  hover:bg-blue-700 hover:text-white transition-colors duration-300 rounded-xl">Booking</button>
+                    </div>
                 </div>
             </div>
         </section>

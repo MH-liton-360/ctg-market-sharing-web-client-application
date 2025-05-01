@@ -4,7 +4,7 @@ const Car = ({ car }) => {
     const { id, service_image, service_name, service_location, service_price } = car;
     return (
         <div>
-            <div className="card bg-base-100 shadow-sm">
+            <div className="card bg-amber-50 shadow-sm">
                 <figure>
                     <img
                         src={service_image}
@@ -26,7 +26,7 @@ const Car = ({ car }) => {
                         </div>
                     </div>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary"><Link to={`/car/${id}`}> See Details</Link></button>
+                        <button className="btn btn-primary bg-amber-50 text-blue-700 btn  hover:bg-blue-700 hover:text-white transition-colors duration-300 rounded-xl"><Link to={`/car/${id}`}>Details</Link></button>
                     </div>
                 </div>
 
