@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Poster = ({ poster }) => {
-    const { id, service_image, service_name, genre, release_year, rating, duration } = poster;
+    const { id, service_image, service_name, service_location, service_price } = poster;
     return (
         <div>
             <div className="card bg-base-100 shadow-sm">
@@ -13,17 +13,16 @@ const Poster = ({ poster }) => {
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{service_name}</h2>
-                    <p>{genre}</p>
+                    <p>{service_location}</p>
 
                     <div className="divider"></div>
                     <div className="grid grid-cols-2 gap-x-6 gap-y-3 ">
                         <div className="flex flex-col space-y-3">
-                            <p><strong>Rating:</strong> {rating}</p>
-                            <p><strong>Release_year:</strong> {release_year}</p>
+                            <p><strong>Location:</strong> {service_location}</p>
                         </div>
 
                         <div className="flex flex-col space-y-3">
-                            <p><strong>Duration:</strong> {duration}</p>
+                            <p><strong>Price:</strong> {service_price}</p>
                         </div>
                     </div>
                     <div className="card-actions justify-end">

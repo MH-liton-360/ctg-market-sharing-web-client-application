@@ -4,77 +4,59 @@
         "service_image": "https://i.ibb.co/7Jf6ZS4B/Nissan-gtr-1.webp",
         "service_name": "Interior Deep Cleaning",
         "service_description": "Thorough cleaning of seats, mats, dashboard, and windows.",
-        "view_detail_button": "View Details",
-        "service_provider": {
-            "provider_image": "https://example.com/providers/cleanmaster.jpg",
-            "provider_name": "CleanMaster Co."
-        },
         "service_price": "$79",
-        "service_location": "Dhaka"
+        "service_location": "Dhaka",
+        "rating": 4.7,
+        "provider_name": "CleanMaster Co."
     },
     {
         "id": "2",
         "service_image": "https://example.com/images/exterior-wash.jpg",
         "service_name": "Exterior Wash & Wax",
         "service_description": "Complete exterior wash with premium wax coating.",
-        "view_detail_button": "View Details",
-        "service_provider": {
-            "provider_image": "https://example.com/providers/shinepro.jpg",
-            "provider_name": "ShinePro Services"
-        },
         "service_price": "$49",
-        "service_location": "Comilla"
+        "service_location": "Comilla",
+        "rating": 4.5,
+        "provider_name": "ShinePro Services"
     },
     {
         "id": "3",
         "service_image": "https://example.com/images/engine-cleaning.jpg",
         "service_name": "Engine Bay Cleaning",
         "service_description": "Safe and detailed cleaning of your car's engine bay.",
-        "view_detail_button": "View Details",
-        "service_provider": {
-            "provider_image": "https://example.com/providers/autoexpert.jpg",
-            "provider_name": "AutoExpert Cleaners"
-        },
         "service_price": "$65",
-        "service_location": "Chittagong"
+        "service_location": "Chittagong",
+        "rating": 4.3,
+        "provider_name": "AutoExpert Cleaners"
     },
     {
         "id": "4",
         "service_image": "https://example.com/images/full-detailing.jpg",
         "service_name": "Full Car Detailing",
         "service_description": "Inside-outside deep cleaning and polishing for your car.",
-        "view_detail_button": "View Details",
-        "service_provider": {
-            "provider_image": "https://example.com/providers/detailking.jpg",
-            "provider_name": "DetailKing Professionals"
-        },
         "service_price": "$159",
-        "service_location": "Sylhet"
+        "service_location": "Sylhet",
+        "rating": 4.9,
+        "provider_name": "DetailKing Professionals"
     },
     {
         "id": "5",
         "service_image": "https://example.com/images/headlight-restoration.jpg",
         "service_name": "Headlight Restoration",
         "service_description": "Restore clarity and brightness to your headlights.",
-        "view_detail_button": "View Details",
-        "service_provider": {
-            "provider_image": "https://example.com/providers/lumiclean.jpg",
-            "provider_name": "LumiClean Experts"
-        },
         "service_price": "$39",
-        "service_location": "Rajshahi"
+        "service_location": "Rajshahi",
+        "rating": 4.2,
+        "provider_name": "LumiClean Experts"
     },
     {
         "id": "6",
         "service_image": "https://example.com/images/odor-removal.jpg",
         "service_name": "Odor Removal Treatment",
         "service_description": "Remove stubborn smells with our ozone deodorizing service.",
-        "view_detail_button": "View Details",
-        "service_provider": {
-            "provider_image": "https://example.com/providers/freshride.jpg",
-            "provider_name": "FreshRide Solutions"
-        },
         "service_price": "$89",
-        "service_location": "Barisal"
+        "service_location": "Barisal",
+        "rating": 4.6,
+        "provider_name": "FreshRide Solutions"
     }
 ]

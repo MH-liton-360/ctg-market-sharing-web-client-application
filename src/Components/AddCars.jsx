@@ -10,11 +10,11 @@ const AddCars = () => {
         const name = form.name.value;
         const location = form.location.value;
         const price = form.price.value;
-        const year = form.year.value;
+        const provider = form.provider.value;
         const rating = form.rating.value;
-        const summary = form.summary.value;
+        const description = form.description.value;
 
-        const newCar = { photo, name, location, price, year, rating, summary };
+        const newCar = { photo, name, location, price, year, rating, description };
         console.log(newCar);
 
         //send data to the server
@@ -76,7 +76,7 @@ const AddCars = () => {
                         <input name="price" type="text" className="input w-full" placeholder="service_price" />
                     </div>
                     <div className="md:w-1/2">
-                        <label className="fieldset-label">Release Year</label>
+                        <label className="fieldset-label">provider</label>
                         <input name="year" type="text" className="input w-full" placeholder="Release Year" />
                     </div>
                 </div>
@@ -88,8 +88,8 @@ const AddCars = () => {
                         <input name="rating" type="text" className="input w-full" placeholder="Rating" />
                     </div>
                     <div className="md:w-1/2">
-                        <label className="fieldset-label">Summary</label>
-                        <textarea name="summary" id="" cols="2" rows="2" className="w-full border-2 border-amber-50 pl-2"></textarea>
+                        <label className="fieldset-label">Description</label>
+                        <textarea name="description" id="" cols="2" rows="2" className="w-full border-2 border-amber-50 pl-2"></textarea>
                     </div>
                 </div>
 

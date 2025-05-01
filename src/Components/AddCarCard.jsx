@@ -2,7 +2,7 @@ import Swal from "sweetalert2";
 
 const AddCarCard = ({ movie, movies, setMovies }) => {
 
-    const { _id, photo, name, genre, duration, year, rating, summary } = movie;
+    const { _id, Service_image, Service_name, genre, duration, year, rating, summary } = movie;
 
     const handleDelete = _id => {
         console.log(_id);
@@ -44,13 +44,13 @@ const AddCarCard = ({ movie, movies, setMovies }) => {
                 <div className="card card-side bg-base-100 shadow-xl">
                     <figure>
                         <img
-                            src={photo}
+                            src={Service_image}
                             className="h-[150px] p-4 rounded-3xl"
                             alt="Movie" />
                     </figure>
                     <div className="flex justify-between w-full p-4">
                         <div className="pl-12 pt-3">
-                            <h2><strong>Name: </strong> {name}</h2>
+                            <h2><strong>Name: </strong> {Service_image}</h2>
                             <p><strong>Genre: </strong> {genre}</p>
                             <p><strong>Duration: </strong> {duration}</p>
                             <p><strong>Year: </strong> {year}</p>
