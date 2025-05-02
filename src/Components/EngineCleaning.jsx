@@ -4,11 +4,12 @@ import logo_1 from "../assets/car-engine-cleaning.jpg"
 const EngineCleaning = () => {
     const backgroundStyle = {
         backgroundImage: "url('/src/assets/bg-image.jpg')",
-        // backgroundSize: "cover",
-        // backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
 
         height: "400px",
     };
+
 
     return (
         <div>
