@@ -71,6 +71,14 @@ const router = createBrowserRouter([
                 ),
                 errorElement: <Error />
             },
+            {
+                path: "/services/all-service",
+                element: (
+                    <PrivateRoute>
+                        <ServiceToDo></ServiceToDo>
+                    </PrivateRoute>
+                )
+            },
 
         ]
     },

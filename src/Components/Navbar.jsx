@@ -14,8 +14,13 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex justify-center items-center">
             <ul className="menu menu-horizontal px-1 flex gap-4 items-center">
                 <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/services">Services</NavLink></li>
 
+                <li tabIndex={0} className="dropdown dropdown-hover">
+                    <label tabIndex={0} className="btn btn-ghost m-1">Services</label>
+                    <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 left-1/2 -translate-x-1/2">
+                        <li><NavLink to="/services/all-service">Our All Service</NavLink></li>
+                    </ul>
+                </li>
                 {user?.email && (
                     <li tabIndex={0} className="dropdown dropdown-hover">
                         <label tabIndex={0} className="btn btn-ghost m-1">Dashboard</label>
