@@ -10,6 +10,7 @@ import ManageService from "../Components/ManageService";
 import BookedServices from "../Components/BookedServices";
 import ServiceToDo from "../Components/ServiceToDo";
 import CarDetails from "../Components/CarDetails";
+import EngineCleaning from "../Components/EngineCleaning";
 
 const router = createBrowserRouter([
 
@@ -71,17 +72,23 @@ const router = createBrowserRouter([
                 ),
                 errorElement: <Error />
             },
+
+            // routes path services 
             {
-                path: "/services/all-service",
-                element: (
-                    <PrivateRoute>
-                        <ServiceToDo></ServiceToDo>
-                    </PrivateRoute>
-                )
+                path: "/services/engine-cleaning",
+                element: <EngineCleaning></EngineCleaning>
             },
 
         ]
     },
+
+
+
+
+
+
+
+
 
     {
         path: "auth",

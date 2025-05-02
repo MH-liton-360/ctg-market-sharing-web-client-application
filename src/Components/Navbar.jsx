@@ -18,9 +18,14 @@ const Navbar = () => {
                 <li tabIndex={0} className="dropdown dropdown-hover">
                     <label tabIndex={0} className="btn btn-ghost m-1">Services</label>
                     <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 left-1/2 -translate-x-1/2">
-                        <li><NavLink to="/services/all-service">Our All Service</NavLink></li>
+                        <li><NavLink to="/services/engine-cleaning">Engine Cleaning</NavLink></li>
+                        <li><NavLink to="/services/all-service">Crystal Shine</NavLink></li>
+                        <li><NavLink to="/services/all-service">Diagnostic Tests</NavLink></li>
+                        <li><NavLink to="/services/all-service">Engine Service</NavLink></li>
                     </ul>
                 </li>
+
+
                 {user?.email && (
                     <li tabIndex={0} className="dropdown dropdown-hover">
                         <label tabIndex={0} className="btn btn-ghost m-1">Dashboard</label>
