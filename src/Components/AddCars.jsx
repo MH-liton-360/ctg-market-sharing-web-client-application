@@ -100,9 +100,6 @@ const AddCars = () => {
                 </form>
             </div>
         </div>
-
-
-
     );
 };
 
