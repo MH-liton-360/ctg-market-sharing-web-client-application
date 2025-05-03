@@ -5,10 +5,14 @@ import logo_4 from "../assets/auto-car-wash-logo-1.avif"
 import logo_5 from "../assets/Fully-Automatic-Car-Wash-Machine.avif"
 import logo_6 from "../assets/Car-washing-with-soap-and-brush.jpg"
 import "../style/ServiceToDo.css"
+import { Helmet } from "react-helmet-async"
 
 const ServiceToDo = () => {
     return (
         <div>
+            <Helmet>
+                <title>Dashboard || Service ToDo</title>
+            </Helmet>
             <header className="pt-15">
 
 

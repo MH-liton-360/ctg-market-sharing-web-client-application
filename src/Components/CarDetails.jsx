@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 
 const CarDetails = () => {
@@ -6,9 +7,30 @@ const CarDetails = () => {
     const data = useLoaderData();
     const navigate = useNavigate();
 
-    const submitCarBooked = e => {
+    const submitCarBooked = async (e) => {
         e.preventDefault();
-        navigate("/dashboard/booked-service");
+        navigate("/dashboard/booked-service", {
+            state: { bookedCar: car }
+        });
+        try {
+            const response = await fetch("https://ctg-market-sharing-web-server.vercel.app/bookings", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(car)
+            });
+
+            const result = await response.json();
+            console.log("Booking saved:", result);
+
+            navigate("/dashboard/booked-service", {
+                state: { bookedCar: car }
+            });
+
+        } catch (error) {
+            console.error("Failed to book:", error);
+        }
     };
 
 
@@ -19,6 +41,9 @@ const CarDetails = () => {
     return (
 
         <section className="justify-items-center pt-10">
+            <Helmet>
+                <title>Car || Car-Details</title>
+            </Helmet>
             <div className="card bg-base-100 w-96 shadow-sm">
                 <figure>
                     <img

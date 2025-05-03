@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet-async";
 import logo_1 from "../assets/car-engine-cleaning.jpg"
 
 const EngineCleaning = () => {
@@ -13,7 +14,9 @@ const EngineCleaning = () => {
 
     return (
         <div>
-
+            <Helmet>
+                <title>Service || Engine Cleaning</title>
+            </Helmet>
             <div className="pb-16">
                 <h3 className="font-mono font-black text-4xl pt-12 py-2">The General History and Evolution of Car Washes</h3>
                 <p> <span className="text-white  w-[32px] text-4xl bg-black rounded-sm">K</span> eep your car sparkling clean with our professional car wash services! We offer a range of options, from basic washes to detailed interior and exterior cleaning. Using high-quality products and equipment, we ensure a spotless finish every time. Visit us today and experience the difference!</p>
