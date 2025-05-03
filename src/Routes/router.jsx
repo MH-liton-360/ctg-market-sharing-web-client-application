@@ -11,7 +11,7 @@ import BookedServices from "../Components/BookedServices";
 import ServiceToDo from "../Components/ServiceToDo";
 import CarDetails from "../Components/CarDetails";
 import EngineCleaning from "../Components/EngineCleaning";
-
+import BookedCar from "../Components/BookedCar";
 const router = createBrowserRouter([
 
     {
@@ -78,6 +78,11 @@ const router = createBrowserRouter([
                 path: "/services/engine-cleaning",
                 element: <EngineCleaning></EngineCleaning>
             },
+            {
+                path: "/BookedCar/:id",
+                element: <BookedCar></BookedCar>
+            },
+
 
         ]
     },

@@ -1,9 +1,15 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 
 const CarDetails = () => {
 
     const { id } = useParams();
     const data = useLoaderData();
+    const navigate = useNavigate();
+
+    const submitCarBooked = e => {
+        e.preventDefault();
+        navigate("/dashboard/booked-service");
+    };
 
 
 
@@ -41,7 +47,7 @@ const CarDetails = () => {
                         <p><strong>Description:</strong> {service_description}</p>
                     </div>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary bg-amber-50 text-blue-700 btn  hover:bg-blue-700 hover:text-white transition-colors duration-300 rounded-xl">Booking</button>
+                        <button onClick={submitCarBooked} className="btn btn-primary bg-amber-50 text-blue-700 btn  hover:bg-blue-700 hover:text-white transition-colors duration-300 rounded-xl">Booking</button>
                     </div>
                 </div>
             </div>
